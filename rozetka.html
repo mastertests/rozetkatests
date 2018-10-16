@@ -1,0 +1,237 @@
+{
+  "id": "ef180947-3dc9-47a2-a073-248ea91f43f9",
+  "version": "1.1",
+  "name": "rozetka",
+  "url": "https://rozetka.com.ua/",
+  "tests": [{
+    "id": "85060a58-a06c-42dd-a95e-6a4d5a2aed44",
+    "name": "add_phone",
+    "commands": [{
+      "id": "99044cad-ea0c-43e0-a606-7d9c42751350",
+      "comment": "",
+      "command": "open",
+      "target": "/telefony/c4627900/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cc4dc22-5d84-4376-afd7-9c4db237d051",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Xiaomi Redmi Note 5 3/32GB Black (Global Rom + OTA)",
+      "targets": [
+        ["linkText=Xiaomi Redmi Note 5 3/32GB Black (Global Rom + OTA)", "linkText"],
+        ["css=a.g-title-link", "css"],
+        ["css=.slider-i-td:nth-child(1) .g-title-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Xiaomi Redmi Note 5 3/32GB Black (Global Rom + OTA)')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"document.fireEvent('goodsTitleClick',{extend_event:[{name:'goods_id',value:44101192}]});\"]", "xpath:attributes"],
+        ["xpath=//div[@id='scroller4224']/div/div/div/div/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://rozetka.com.ua/xiaomi_redmi_note5_332gb_black/p44101192/')])[2]", "xpath:href"],
+        ["xpath=//div/div/div/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddb14190-bebd-45e7-aaba-69cefa0d606e",
+      "comment": "",
+      "command": "click",
+      "target": "name=topurchases",
+      "targets": [
+        ["name=topurchases", "name"],
+        ["css=button[name=\"topurchases\"]", "css"],
+        ["css=.detail-buy-btn-link > .btn-link-i", "css:finder"],
+        ["xpath=//button[@name='topurchases']", "xpath:attributes"],
+        ["xpath=//div[@id='price_container']/div[2]/div/form/span/span/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/form/span/span/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21346762-a10e-4591-a620-977607ba04d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hub-i-cart-link-count",
+      "targets": [
+        ["css=.hub-i-cart-link-count", "css:finder"],
+        ["xpath=//a[@onclick=\"document.fireEvent('openCart', {extend_event: [{name: 'eventLocation', value: 'Head'}]});\"]", "xpath:attributes"],
+        ["xpath=//div[@id='cart_block63131']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://my.rozetka.com.ua/cart/')]", "xpath:href"],
+        ["xpath=//li/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d8c2bda-0e74-469b-b097-59263415a9c5",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=input[name=\"quantity\"]", "css"],
+        ["css=.cart-amount-input-text", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//div[@id='cart-popup']/div[2]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8be790cd-f784-4fac-96dd-6f15f92a4d8f",
+      "comment": "",
+      "command": "store",
+      "target": "5",
+      "targets": [],
+      "value": "amount"
+    }, {
+      "id": "28e7a5e8-c144-4d3f-91f8-b29d37211496",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=input[name=\"quantity\"]", "css"],
+        ["css=.cart-amount-input-text", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//div[@id='cart-popup']/div[2]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${amount}"
+    }, {
+      "id": "576a4c28-ebfd-4c6f-9552-b07ffa9806be",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "name=cost",
+      "targets": [],
+      "value": "${amount}*4599"
+    }, {
+      "id": "17d3c196-1458-4acb-b30d-28544e97159d",
+      "comment": "",
+      "command": "runScript",
+      "target": "total_sub = \"${amount}*4599\".substring(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6aa6f887-5cbe-435e-96d0-ec53b72e284e",
+      "comment": "",
+      "command": "click",
+      "target": "css=img.popup-close-icon.sprite",
+      "targets": [
+        ["css=img.popup-close-icon.sprite", "css"],
+        ["css=.popup-close-icon", "css:finder"],
+        ["xpath=//img[@alt='×']", "xpath:img"],
+        ["xpath=//div[@id='cart-popup']/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6c31cfa3-1ced-489e-b3b3-da660fcb7e50",
+    "name": "delete_phone",
+    "commands": [{
+      "id": "2b002b30-78ab-4a7a-a7ba-717f1e256e07",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36f079f1-5706-44d1-a819-c85b834b8a85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hub-i-cart-link-count",
+      "targets": [
+        ["css=.hub-i-cart-link-count", "css:finder"],
+        ["xpath=//a[@onclick=\"document.fireEvent('openCart', {extend_event: [{name: 'eventLocation', value: 'Head'}]});\"]", "xpath:attributes"],
+        ["xpath=//div[@id='cart_block28026']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://my.rozetka.com.ua/cart/')]", "xpath:href"],
+        ["xpath=//li/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6230b919-2fa8-4512-868e-2546b1d8a14c",
+      "comment": "",
+      "command": "click",
+      "target": "css=img.cart-check-icon.sprite",
+      "targets": [
+        ["css=img.cart-check-icon.sprite", "css"],
+        ["css=.cart-check-icon", "css:finder"],
+        ["xpath=//img[@alt='✓']", "xpath:img"],
+        ["xpath=//div[@id='cart-popup']/div[2]/div[2]/div[2]/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df92a3d1-2eb8-415f-9f1b-7c1e4189eace",
+      "comment": "",
+      "command": "click",
+      "target": "name=delete",
+      "targets": [
+        ["name=delete", "name"],
+        ["css=a[name=\"delete\"]", "css"],
+        ["css=.cart-i-delete-link", "css:finder"],
+        ["xpath=//a[@name='delete']", "xpath:attributes"],
+        ["xpath=//div[@id='cart-popup']/div[2]/div[2]/div[2]/div/div/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e26e26cc-5a16-4244-bcf1-534ac15afa48",
+    "name": "assert",
+    "commands": [{
+      "id": "27a31c25-fa6f-4846-9cd0-6ee3ecb73c83",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8abbea63-3f5b-4132-9d40-7deb78266956",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Бытовая техника",
+      "targets": [
+        ["linkText=Бытовая техника", "linkText"],
+        ["css=#\\34 306 > .f-menu-l-i-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Бытовая техника')]", "xpath:link"],
+        ["xpath=(//a[@name='fat_menu_link'])[3]", "xpath:attributes"],
+        ["xpath=//li[@id='4306']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://bt.rozetka.com.ua/')]", "xpath:href"],
+        ["xpath=//nav/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6567383d-2381-4c03-9eea-d001f8005311",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.p-auto-block:nth-child(3) .pab-row:nth-child(2) > .pab-cell:nth-child(1) img",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "524e1117-e8ae-40d6-b449-a54abc65b9e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-auto-block:nth-child(3) .pab-row:nth-child(2) > .pab-cell:nth-child(1) img",
+      "targets": [
+        ["css=.p-auto-block:nth-child(3) .pab-row:nth-child(2) > .pab-cell:nth-child(1) img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i1.rozetka.ua/goods/portal/constructors/units/groups/121/121614.120x150.jpg')]", "xpath:img"],
+        ["xpath=//div[@id='content-inner-block']/div[2]/div[2]/div/div[2]/div/div/div/div/div[3]/div/div/div[3]/div/div[2]/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fa892f5-938e-4491-b74b-c429b1948c47",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.p-auto-block:nth-child(3) .pab-row:nth-child(2) > .pab-cell:nth-child(1) img",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e0608d32-40f7-4a40-85fd-e72261cb9c5c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["85060a58-a06c-42dd-a95e-6a4d5a2aed44", "6c31cfa3-1ced-489e-b3b3-da660fcb7e50", "e26e26cc-5a16-4244-bcf1-534ac15afa48"]
+  }],
+  "urls": ["https://rozetka.com.ua/"],
+  "plugins": []
+}
